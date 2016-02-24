@@ -1,0 +1,28 @@
+
+body {
+	font-family: Merriweather;
+	color: #2c3944;
+}
+
+form {
+	padding: 1em 0.5em;
+}
+
+fieldset {
+	padding: 1em 0.5em;
+}
+
+input[type="checkbox"]::after,
+input[type="radio"]::after {
+	content: attr(title);
+	display: inline-block;
+	margin-left: 20px;
+
+}
+
+input {
+	display: block;
+	width: 100%;
+	margin: 0.5em 0.5em;
+}
+

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>online registration form</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.3/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>THE CODE REVIEW</h1>
+		<h2>Sign up for our newsletter</h2>
+		<p>Get the latest news on how your code is doing right in your inbox</p>
+	</header>
+	<form>
+		<fieldset >
+			<legend>Contact Information</legend>
+			<label>Full Name</label>
+			<input type="text" id="name" name="user_name" value="Required">
+			<label>Email Address</label>
+			<input type="email" id="email" name="user_email" value="Required">
+			<label>Phone Number</label>
+			<input type="tel" id="phone" name="user_phone">
+			<label>Street Address</label>
+			<input type="text" id="address" name="user_address">
+			<label>City</label>
+			<input type="text" id="city" name="user_city">
+			<label>State</label>
+			<select id="state" name="user_state">
+				<option value="AK">AK</option>
+				<option value="AL">AL</option>
+				<option value="CA">CA</option>
+				<option value="DE">DE</option>
+				<option value="OR" selected>OR</option>
+				<option value="WA">WA</option>
+			</select>
+			<label>Zip Code</label>
+			<input type="number" id="zip" name="user_zip">
+		</fieldset>
+		<fieldset>
+			<legend>Newsletter</legend>
+			<p>Select the newsletters you would like to receive</p>
+			<input type="checkbox" title="HTML News">
+			<input type="checkbox" title="CSS News">
+			<input type="checkbox" title="Javascript News">
+			<p>Newsletter format</p>
+			<input type="radio" title="HTML">
+			<input type="radio" title="Plain text">
+			<p>Other topics you'd like to hear about</p>
+			<textarea></textarea>
+		</fieldset>
+		<button>Sign Up</button>
+	</form>
+	<footer>
+		<p>Copyright The Code Review</p>
+	</footer>
+
+</body>
+</html>
