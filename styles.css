@@ -1,24 +1,26 @@
 /* BODY STYLES */
 
+
 body {
 	font-family: Merriweather;
 }
 
 /* ABOVE THE FORM STYLES */
 
-header {
-	display: flex;
-	flex-direction: column;
-	align-items:center;
+.main-header {
+	text-align: center;
 	background-color: #2c3944;
 	color: #fff;
+	line-height: 3em;
+
 }
 
-header h1 {	
-	font-size: 1em;
-	height: 3em;
+.main-header h1 {	
+	font-size: 1.25em;
 	padding: 1em;
 	font-weight: normal;
+	border: none;
+	margin-top: 0;
 }
 
 
@@ -26,24 +28,41 @@ header h1 {
 
 
 form {
-	color: #c1cfd1;
-	margin-top: 2px;
-	margin-right: 1em;
-	margin-left: 1em;
-	padding: 1em 0;
+	color: #dedede;
+	padding-right: 1em;
+	padding-left: 1em;
+	margin: 0;
 }
 
 .intro {
 	text-align: center;
-	border-bottom: 3px solid #2c3944;
+	margin-bottom: 2em;
+	padding: 0 1em;
 }
 
 .intro h2 {
 	color: #2c3944;
+	font-size: 1.25em;
 }
 
 .intro p {
 	color: #cbcfd1;
+	font-size: .75em;
+}
+
+.thick, .thin {
+	border-style: solid;
+	color: #2c3944;
+}
+
+.thick {
+	border-width: 2px;
+	margin-bottom: 0;
+}
+
+.thin {
+	border-width: 1px;
+	margin-top: 2px;
 }
 
 fieldset {
@@ -57,75 +76,100 @@ legend {
 }
 
 #contact {
-	border-top: 1px solid #2c3944;
-	border-bottom: 1px solid #2c3944;
-	padding: 1em 0.5em;
+	border-bottom: 2px solid #2c3944;
+	padding: 1em 0;
+	margin: 1em 0 1.5em 0;
+	width: 100%;
 }
 
-#contact input {
-	margin-left: auto;
-	margin-right: auto;
+#contact input:focus,
+#contact select:focus,
+#newsletter textarea:focus {
+	outline: none;
+	border: 2px solid #4f7fa1;
+}
+
+#name, 
+#email,
+#phone,
+#address,
+#city,
+#state,
+#zip {
 	background-color: #eff0f1;
 	border: none;
 	height: 2em;
 	border-radius: 3px;
-	padding-right: 10px;
+	margin: 0.5em 0;
+} 
 
+#name, 
+#email,
+#phone,
+#address,
+#city,
+#state {
+	width: 100%;
+	margin-right: 0;
+}
+
+#contact label {
+	font-size: 0.75em;
 }
 
 input {
 	display: block;
 	width: 100%;
-	margin: 0.5em 0.5em;
 }
 
-select {
-	width: 100%;
-	background-color: #eff0f1;
-	height: 2em;
-	border: none;
-	border-radius: 3px;
-	
-}
+
 
 input::placeholder {
 	direction: rtl;
 	font-size: 0.5em;
-
+	font-style: italic;
+	padding: .5em 1.5em;
 }
 
 input::-webkit-input-placeholder {
 	direction: rtl;
 	font-size: 0.5em;
-	
+	font-style: italic;
+	padding: .5em 1.5em;
 }
 
 input::-moz-placeholder {
 	direction: rtl;
 	font-size: 0.5em;
-	
-}
+	font-style: italic;
+	padding: .5em 1.5em;}
 
 input:-ms-input-placeholder {
 	direction: rtl;
 	font-size: 0.5em;
-	
+	font-style: italic;
+	padding: .5em 1.5em;
 }
 
 input:-moz-placeholder {
 	direction: rtl;
 	font-size: 0.5em;
-	
+	font-style: italic;
+	padding: .5em 1.5em;
 }
 
 #zip {
 	width: 50%;
-	margin-left: 0;
-	margin-right: auto;
+	display: block;
 }
 
 #newsletter {
-	padding: 1em 0.5em;
+	padding: 1em 0;
+	margin: 1em 0;
+}
+
+#newsletter input {
+	margin: 1em 0;
 }
 
 
@@ -143,25 +187,31 @@ input[type="radio"]::after {
 	content: attr(title);
 	display: inline-block;
 	margin-left: 25px;
-
 }
 
 
 textarea {
 	width: 100%;
 	background-color: #eff0f1;
+	border-radius: 3px;
 	padding: 1em;
 	resize: none;
+	height: 6em;
 	box-sizing: border-box;
 }
 
-button {
+#submit {
 	width: 100%;
 	color: #fff;
 	background-color: #4ebab5;
 	padding: 1em;
 	border: none;
 	border-radius: 3px;
+}
+
+#submit:focus {
+	outline: none;
+	background-color: #0AFFF3;
 }
 
 footer {
@@ -175,23 +225,55 @@ footer {
 /* MEDIA QUERIES */
 
 @media (min-width: 760px) {
+	
 	form {
-		max-width: 500px;
+		width: calc(100%-2em);
+		max-width: 800px;
 		margin-right: auto;
 		margin-left: auto;
 	}
 
-	#contact label {
-		float: left;
-		margin-right: 10%;
-		display: inline-block;
-
+	.intro {
+		padding: 1em 0;
+		margin-bottom: 1em;
 	}
 
-		#contact input {
+	
+
+	#contact label {
+		width: 30%;
+		display: inline-block;
+		float: left;
+		height: 3em;
+		margin: 0.5em 0;
+		line-height: 2em;
+		box-sizing: border-box;
+		padding: 0.5em 0;
+	}
+
+	#name, 
+	#email,
+	#phone,
+	#address,
+	#city {
+		
 		width: 70%;
 		display: inline-block;
 		float: right;
+		box-sizing: border-box;
 	}
+
+	#state {
+		width: 70%;
+		display: inline block;
+		float: right;
+	}
+
+	#zip {
+		width: 20%;
+		float: left;
+		display: inline-block;
+	}
+
 }
 
