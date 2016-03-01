@@ -1,15 +1,15 @@
 /* BODY STYLES */
 
-
 body {
-	font-family: Merriweather;
+	font-family: Arvo;
+	background-color: #F0F9F9;
 }
 
 /* ABOVE THE FORM STYLES */
 
 .main-header {
 	text-align: center;
-	background-color: #2c3944;
+	background-color: #112c2b;
 	color: #fff;
 	line-height: 3em;
 
@@ -28,7 +28,7 @@ body {
 
 
 form {
-	color: #dedede;
+	color: #607cb7;
 	padding-right: 1em;
 	padding-left: 1em;
 	margin: 0;
@@ -41,18 +41,18 @@ form {
 }
 
 .intro h2 {
-	color: #2c3944;
+	color: #4ea7ba;
 	font-size: 1.25em;
 }
 
 .intro p {
-	color: #cbcfd1;
+	color: #607cb7;
 	font-size: .75em;
 }
 
 .thick, .thin {
 	border-style: solid;
-	color: #2c3944;
+	color: #4ea7ba;
 }
 
 .thick {
@@ -72,48 +72,36 @@ fieldset {
 
 legend {
 	font-weight: bold;
-	color: #2c3944;
+	color: #4ea7ba;
 }
 
-#contact {
-	border-bottom: 2px solid #2c3944;
+#contact,
+#extras {
+	border-bottom: 2px solid #4ea7ba;
 	padding: 1em 0;
-	margin: 1em 0 1.5em 0;
+	margin: 1em 0 .5em 0;
 	width: 100%;
 }
 
-#contact input:focus,
-#contact select:focus,
-#newsletter textarea:focus {
-	outline: none;
-	border: 2px solid #4f7fa1;
-}
-
-#name, 
-#email,
-#phone,
-#address,
-#city,
-#state,
-#zip {
+.field {
+	width: 100%;
 	background-color: #eff0f1;
 	border: none;
 	height: 2em;
 	border-radius: 3px;
 	margin: 0.5em 0;
+	-webkit-transition: background-color 2s;
+	transition: background-color 2s;
 } 
 
-#name, 
-#email,
-#phone,
-#address,
-#city,
-#state {
-	width: 100%;
-	margin-right: 0;
+.field:focus {
+	outline: none;
+	border: 2px solid #4ea7ba;
+	background-color: #d3eeed;
 }
 
-#contact label {
+#contact label,
+#extras label {
 	font-size: 0.75em;
 }
 
@@ -121,8 +109,6 @@ input {
 	display: block;
 	width: 100%;
 }
-
-
 
 input::placeholder {
 	direction: rtl;
@@ -163,7 +149,8 @@ input:-moz-placeholder {
 	display: block;
 }
 
-#newsletter {
+#newsletter,
+#extras {
 	padding: 1em 0;
 	margin: 1em 0;
 }
@@ -190,20 +177,29 @@ input[type="radio"]::after {
 }
 
 
-textarea {
+#interests {
 	width: 100%;
 	background-color: #eff0f1;
 	border-radius: 3px;
+	border: none;
 	padding: 1em;
 	resize: none;
 	height: 6em;
 	box-sizing: border-box;
+	-webkit-transition: background-color 2s;
+	transition: background-color 2s;
+}
+
+#interests:focus {
+	outline: none;
+	border: 2px solid #4ea7ba;
+	background-color: #d3eeed;
 }
 
 #submit {
 	width: 100%;
 	color: #fff;
-	background-color: #4ebab5;
+	background-color: #112c2b;
 	padding: 1em;
 	border: none;
 	border-radius: 3px;
@@ -211,7 +207,7 @@ textarea {
 
 #submit:focus {
 	outline: none;
-	background-color: #0AFFF3;
+	background-color: #d3eeed;
 }
 
 footer {
@@ -240,7 +236,8 @@ footer {
 
 	
 
-	#contact label {
+	#contact label,
+	#extras label {
 		width: 30%;
 		display: inline-block;
 		float: left;
@@ -251,22 +248,11 @@ footer {
 		padding: 0.5em 0;
 	}
 
-	#name, 
-	#email,
-	#phone,
-	#address,
-	#city {
-		
+	.field {
 		width: 70%;
 		display: inline-block;
 		float: right;
 		box-sizing: border-box;
-	}
-
-	#state {
-		width: 70%;
-		display: inline block;
-		float: right;
 	}
 
 	#zip {
