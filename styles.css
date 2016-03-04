@@ -217,6 +217,22 @@ footer {
 	color: #cbcfd1;
 }
 
+/* HELP AND VALIDATION STYLES */
+
+.help {
+	display: none;
+	font-size: 90%;
+}
+
+input:focus + .help {
+	display: inline-block;
+}
+
+input:invalid,
+input:out-of-range {
+	background: #ffdcd6;
+}
+
 
 /* MEDIA QUERIES */
 

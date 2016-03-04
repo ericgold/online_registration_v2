@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html5>
 <html lang="en">
 	<head>
 		<title>online registration form</title>
@@ -20,9 +20,9 @@
 			<fieldset id="contact">
 				<legend>Contact Information</legend>
 				<label for="name">Full Name</label>
-				<input type="text" id="name" class="field" name="user_name" placeholder="Required">
+				<input type="text" id="name" class="field" name="user_name" placeholder="Required" required aria-describedby="name-format" aria-required="true" pattern="[A-Za-z-'0-9']+" title="firstname lastname">
 				<label for="email">Email Address</label>
-				<input type="email" id="email" class="field" name="user_email" placeholder="Required">
+				<input type="email" id="email" class="field" name="user_email" placeholder="Required" required>
 				<label for="phone">Phone Number</label>
 				<input type="tel" id="phone" class="field" name="user_phone">
 				<label for="address">Street Address</label>
