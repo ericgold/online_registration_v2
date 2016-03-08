@@ -21,7 +21,7 @@
 			<fieldset id="contact">
 				<legend>Contact Information</legend>
 				<label for="name">Full Name</label>
-				<input type="text" id="name" class="field" name="user_name" placeholder="Required" required aria-required="true" pattern="[A-Za-z-'0-9']+" title="firstname lastname">
+				<input type="text" id="name" class="field" name="user_name" placeholder="Required" required aria-required="true" aria-describedby="name" pattern="[A-Za-z-'0-9']+" title="firstname lastname">
 				<label for="email">Email Address</label>
 				<input type="email" id="email" class="field" name="user_email" placeholder="Required" required>
 				<label for="phone">Phone Number</label>
@@ -84,7 +84,7 @@
 					<option value="WY">WY</option>
 				</select>
 				<label for="zip">Zip Code</label>
-				<input type="number" id="zip" class="field" name="user_zip">
+				<input type="text" id="zip" class="field" name="user_zip">
 			</fieldset>
 			<fieldset id="extras">
 				<legend>Important Questions</legend>
@@ -104,7 +104,7 @@
 				<p>Newsletter format</p>
 				<input type="radio" title="HTML" name="news_format" checked>
 				<input type="radio" title="Plain text" name="news_format">
-				<p>Other topics you'd like to hear about</p>
+				<label for="interests">Other topics you'd like to hear about</label>
 				<textarea name="user_interests" id="interests">
 				</textarea>
 			</fieldset>

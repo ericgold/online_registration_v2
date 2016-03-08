@@ -183,6 +183,7 @@ input[type="radio"]::after {
 	border-radius: 3px;
 	border: none;
 	padding: 1em;
+	margin-top: .5em;
 	resize: none;
 	height: 6em;
 	box-sizing: border-box;
@@ -195,6 +196,7 @@ input[type="radio"]::after {
 	border: 2px solid #4ea7ba;
 	background-color: #d3eeed;
 }
+
 
 #submit {
 	width: 100%;
@@ -239,7 +241,7 @@ input:out-of-range {
 @media (min-width: 760px) {
 	
 	form {
-		width: calc(100%-2em);
+		width: calc(100% - 2em);
 		max-width: 800px;
 		margin-right: auto;
 		margin-left: auto;
