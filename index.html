@@ -11,7 +11,7 @@
 		<header class="main-header">
 			<h1>THE CODE REVIEW</h1>
 		</header>
-		<form>
+		<form action="#" method="POST">
 			<div class="intro">
 				<h2>Sign up for our newsletter</h2>
 				<p>Get the latest news on how your code is doing right in your inbox</p>
@@ -98,12 +98,12 @@
 			<fieldset id="newsletter">
 				<legend>Newsletter</legend>
 				<p>Select the newsletters you would like to receive</p>
-				<input type="checkbox" title="HTML News">
-				<input type="checkbox" title="CSS News">
-				<input type="checkbox" title="Javascript News">
+				<input type="checkbox" title="HTML News" value="" name="user_html_news">
+				<input type="checkbox" title="CSS News" value="" name="user_css_news">
+				<input type="checkbox" title="Javascript News" value="" name="user_js_news">
 				<p>Newsletter format</p>
-				<input type="radio" title="HTML" name="news_format" checked>
-				<input type="radio" title="Plain text" name="news_format">
+				<input type="radio" title="HTML" name="news_format" value="" checked>
+				<input type="radio" title="Plain text" name="news_format" value="">
 				<label for="interests">Other topics you'd like to hear about</label>
 				<textarea name="user_interests" id="interests">
 				</textarea>
